@@ -21,6 +21,7 @@ logout
 
 ## usage
 
+```bash
 git clone https://github.com/armbian/build.git
 cd build
 git submodule add -f -b main https://github.com/lanefu/armbian-userpatches-example-indiedroid-nova.git userpatches
