@@ -14,7 +14,7 @@ this means 2 things.
 that might look like this
 
 ```bash
-sudo apt install docker.io -i
+sudo apt install docker.io -y
 sudo usermod -a -G docker ${USER}
 logout
 ```
