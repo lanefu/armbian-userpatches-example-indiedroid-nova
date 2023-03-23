@@ -25,5 +25,19 @@ logout
 git clone https://github.com/armbian/build.git
 cd build
 git submodule add -f -b main https://github.com/lanefu/armbian-userpatches-example-indiedroid-nova.git userpatches
-./compile.sh nova-sid
 ```
+
+### interactive build
+
+will prompt for menus etc
+
+```
+./compile.sh nova
+```
+
+### sid cli build
+
+uses `config-nova-sid.conf` to make build
+
+`./compile.sh nova-sid`
+
