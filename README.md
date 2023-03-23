@@ -37,7 +37,12 @@ will prompt for menus etc
 
 ### sid cli build
 
-uses `config-nova-sid.conf` to make build
+uses `config-nova-sid.conf` to build a cli based debian sid image
 
 `./compile.sh nova-sid`
 
+### really bloated gnome build
+
+uses `config-nova-gnmoe-bloated` to build a gnome desktop bloated by most application groups selected
+
+`./compile.sh nova-gnome-bloated`
