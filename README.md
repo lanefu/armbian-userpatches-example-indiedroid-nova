@@ -43,6 +43,33 @@ uses `config-nova-sid.conf` to build a cli based debian sid image
 
 ### really bloated gnome build
 
-uses `config-nova-gnmoe-bloated` to build a gnome desktop bloated by most application groups selected
+uses `config-nova-gnmoe-bloated.conf` to build a gnome desktop bloated by most application groups selected
 
 `./compile.sh nova-gnome-bloated`
+
+### really really opinionated configuration
+
+uses `config-opinionated.conf` to build a debian sid cli image with custom ssh keys, strip out the normal interactive setup.  ready to boot.. and names itself princess-sbc
+
+
+
+## learn more
+
+Read the armbian docs to better understand the power available in the armbian build framework
+
+
+### Understand Hookpoints
+
+Hookpoints allow you to make
+
+add functions prefixed with any of these [hook points](https://docs.armbian.com/Developer-Guide_Extensions-Hooks/) in your config file.
+
+you can use them to use [existing functions](https://github.com/armbian/build/tree/main/lib/functions) or [extensions](https://docs.armbian.com/Developer-Guide_Extensions/)
+
+### Understand Extensions
+
+Extensions are a pluggable way to add a rich library of functions to armbian build framework.   Once enabled via a `enable_extension` call, They are generally available for use anywhere.
+
+https://docs.armbian.com/Developer-Guide_Extensions/#what-is-an-extension      "Specifically, extension files should not contain any code outside of functions – they should do nothing when sourced."
+
+**NOTE** slight edge-case that hooks related to build dependencies may get executed durring the Docker bootstrapping for cache management purposes regardless of being enabled... those extensions aren't otherwise available unless enabled with `enable_extension`
