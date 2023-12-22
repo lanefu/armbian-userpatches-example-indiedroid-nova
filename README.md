@@ -1,10 +1,10 @@
 # armbian-userpatches-example-indiedroid-nova
-reference implementation of having a unique device completely configured via userpatches.
+Reference implementation for the Armbian framework for unofficial boards by having a unique device completely configured via userpatches.
 
 
-## if you haven't used armbian before.
+## if you haven't used armbian build framework before.
 
-it's best let armbian use docker on your behalf.
+it's best let armbian build framework use docker on your behalf.
 
 this means 2 things.
 
